@@ -1,0 +1,7 @@
+{
+  "name": "Touch_9",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
