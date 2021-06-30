@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding [fullscreen]="true">
+  <form class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <!-- <button ion-button (click)="vibrate()"></button> -->
+    <ion-button (click)="isAvailable()">avail?</ion-button>
+    <ion-button (click)="watchForceTouches()">watchForceTouches</ion-button>
+    <ion-button (click)="configureQuickActions()">configure home icons</ion-button>
+    <ion-button (click)="enableLinkPreview()">enable link preview</ion-button>
+    <ion-button (click)="disableLinkPreview()">disable link preview</ion-button>
+    <ion-button (click)="vibrate()">vibrate</ion-button>
+    
+    <!-- <button ion-button type="button" class="btn btn-primary"  (click)="isAvailable()">avail?</button>
+    <button ion-button type="button" class="btn btn-primary" (click)="watchForceTouches()">watchForceTouches</button>
+     <button type="button" class="btn btn-primary" (click)="configureQuickActions()">configure home icons</button>
+    <button ion-button type="button" class="btn btn-primary" (click)="enableLinkPreview()">enable Link Preview</button>
+    <button ion-button type="button" class="btn btn-primary" (click)="disableLinkPreview()">disable link preview</button>
+    <button ion-button type="button" class="btn btn-primary" (click)="vibrate()">vibrate</button> -->
+    <ul>
+      <li *ngFor="let msg of messages">{{msg}}</li>
+    </ul>
+
+
+    </form>
 </ion-content>
+
+<div id="container">
+  <strong>Ready to create an app?</strong>
+  <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+</div>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-cordova/0.1.27-alpha/ng-cordova.min.js" integrity="sha512-6YS5TvR3pxy6vV8VahWGE/Nzsf3Ygczi3iy7Dkbf5uBuvCAPGSaVszxNIDSdCbbedpWBvbm71nPVynnGSSlMXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src=".js/jquery-3.3.1.slim.min.js"></script>
+
